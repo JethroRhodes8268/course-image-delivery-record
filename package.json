@@ -1,0 +1,26 @@
+{
+  "name": "course-image-delivery-record",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/course_delivery_server.ts",
+    "start": "node --env-file-if-exists=.env src/course_delivery_server.ts",
+    "setup": "node --env-file-if-exists=.env src/setup_course_bucket.ts",
+    "demo": "node src/report_demo.ts",
+    "test": "node --test src/course_delivery.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "license": "MIT"
+}
